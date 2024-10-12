@@ -147,7 +147,7 @@ body: SingleChildScrollView(
 
       //SeeAll.......................
       Padding(
-        padding: const EdgeInsets.only(right: 30),
+        padding: const EdgeInsets.only(right: 30, bottom: 12,top: 12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children:[ GestureDetector(
@@ -169,7 +169,31 @@ body: SingleChildScrollView(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),color: Colors.white,
             ),
-          )
+          ),
+          SizedBox(width: 20,),
+          Container(
+            child: Image.asset('assets/images/homepage/emina.png'),
+            width: 60,height: 60,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),color: Colors.white,
+            ),
+          ),
+          SizedBox(width: 20,),
+          Container(
+            child: Image.asset('assets/images/homepage/focallure.png'),
+            width: 60,height: 60,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),color: Colors.white,
+            ),
+          ),
+          SizedBox(width: 20,),
+          Container(
+            child: Image.asset('assets/images/homepage/somethinc.png'),
+            width: 60,height: 60,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),color: Colors.white,
+            ),
+          ),
         ],
       ),
 
@@ -183,6 +207,8 @@ body: SingleChildScrollView(
           ),
         ],
       ),
+
+      
     ],
   ),
 ),
@@ -199,17 +225,33 @@ bottomSheet: Container(
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
       Padding(
-        padding: const EdgeInsets.only(left: 40),
-        child: Image.asset('assets/images/Home Page Used.png',width: 45,height: 45,),
+        padding: const EdgeInsets.only(left: 10),
+        child: ElevatedButton(onPressed: () {
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext)=>Homepage()));
+        },
+        style: ElevatedButton.styleFrom(backgroundColor: pink_006),
+          child: Image.asset('assets/images/Home Page Used.png',width: 35,height: 35,)),
       ),
-      Expanded(child: SizedBox(width: 20,)),
-      Image.asset('assets/images/Banknotes.png', color: pink_006,width:50,height: 50,),
-      Expanded(child: SizedBox(width: 20,)),
-      Image.asset('assets/images/Lip Gloss.png', color: pink_006,width: 40,height: 40,),
-      Expanded(child: SizedBox(width: 20,)),
+      Expanded(child: SizedBox(width: 10,)),
+      ElevatedButton(onPressed: () {
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext)=>Homepage()));
+        },
+        style: ElevatedButton.styleFrom(backgroundColor: pink_004),
+        child: Image.asset('assets/images/Banknotes.png', color: pink_006,width:40,height: 35,)),
+      Expanded(child: SizedBox(width: 10,)),
+      ElevatedButton(onPressed: () {
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext)=>Homepage()));
+        },
+        style: ElevatedButton.styleFrom(backgroundColor: pink_004),
+        child: Image.asset('assets/images/Lip Gloss.png', color: pink_006,width: 30,height: 35,)),
+      Expanded(child: SizedBox(width: 10,)),
       Padding(
-        padding: const EdgeInsets.only(right: 40),
-        child: Image.asset('assets/images/More.png', color: pink_006,width: 45,height: 45,),
+        padding: const EdgeInsets.only(right: 10),
+        child: ElevatedButton(onPressed: () {
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext)=>Homepage()));
+        },
+        style: ElevatedButton.styleFrom(backgroundColor: pink_004),
+          child: Image.asset('assets/images/More.png', color: pink_006,width: 35,height: 35,)),
       ),
     ],
   ),
